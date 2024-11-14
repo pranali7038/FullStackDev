@@ -1,0 +1,4 @@
+git add .
+
+git commit -m "Updated daily task"
+git push origin master
