@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reference types:Arrays and function</title>
+</head>
+<body>
+    <h2>Reference types:Arrays and function</h2>
+
+    <script>
+
+        //arrays
+        // let arr=[1,2,3]
+        // console.log(arr);
+
+        //objects
+        let obj={
+            name:"pranali",
+            rollNo:"753",
+            fun:function(){
+                console.log("Function calling in object");
+                
+            }
+        };
+
+        console.log(obj);
+        obj.fun();
+
+        console.log(typeof(obj));
+        
+        let ref = obj;
+        console.log(ref);
+
+        ref.fun();
+        ref.name="pranalijahagirdar";
+        console.log(ref);
+        console.log(obj);
+        
+        //array method
+        let brr =[];
+        for(let i=0;i<10;i++){
+            brr[i]=i;
+        }
+        brr.push(100);
+        brr.pop();
+        brr.shift();
+        brr.unshift("Pranali");
+        
+        console.log(brr);
+        
+        let res=brr.slice(1,4);
+        console.log(res);
+
+        console.log(brr.slice(6));
+
+
+        console.log(brr.splice(1,0,'prasad'));
+        
+        
+        
+        let arr=[10,20,30];
+        arr.map((num)=>{
+            console.log(num*num); 
+        })
+
+        console.log("testing");
+        
+        let a=[10,21,20,14,25,27];
+        a.map((num)=>{
+            if(num%2==0){
+                console.log(num);
+                
+            }
+        })
+
+        console.log("testing reduce function");
+        let ar =[10,20,30,40,50];
+        
+        let rd=ar.reduce((acc,curr)=>{
+              return acc+curr;           
+        },0);
+        console.log(rd);
+        
+        
+     
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operators and conditionals</title>
+</head>
+<body>
+    <p>operators and conditionals</p>
+    <script>
+
+
+        //arithmetic operator
+        let a=10;
+        let b=5;
+        console.log(a+b);
+        console.log(a-b);
+        console.log(a*b);
+        console.log(a/b);
+        console.log(a%b);
+        console.log(2**5);
+        console.log(a++);
+        console.log(++a);
+        console.log(--a);
+        console.log(a--);
+
+        //assignmnet operator
+        let n1=5;
+        let n2=15;
+        console.log(n1==n2);
+        console.log(n1+=100);
+
+        //comparision operator
+        let m=10;
+        let n=20;
+        console.log(m < n);
+        console.log(m == n);
+        console.log(m===n);
+        console.log(m != n);
+        
+        (m != n)?console.log("Not same"):same;
+
+        let str="100";
+        let num=100;
+        console.log(str==name);
+        console.log(str === name);
+
+        //logical opeator
+        let ans =(true && true && true);
+        console.log(ans);
+
+        let res = (false || false);
+        console.log(res);
+
+        ans = !ans;
+        console.log(ans);
+
+
+        //bitwise operator
+        let b1=1;
+        console.log(b1^10);
+        console.log(b1 & 1);
+        console.log(b1<<10);
+        console.log(b1>>10);
+        console.log(!b1);
+        console.log(~b1);  //changing bits to its opposite bits
+
+        //conditionals
+        //1)if-else
+
+        let c1=10;
+        let c2=50;
+        if(c1 < c2){
+            console.log(c1,"is less than", c2);
+        }else{
+            console.log(c2,"is greater than", c1);
+            
+        }
+
+        //switch statement
+        let day="sunday";
+        switch(day){
+            
+            case "Monday":
+                console.log("first day of week");
+                break;
+            case "Truesday":
+                console.log("second day");
+                break;
+            case "sunday":
+                console.log("wuuhuu weekend");
+                break;
+            default:
+                console.log("wrong choice"); 
+        }
+        
+        
+        
+        
+
+    </script>
+</body>
+</html>
