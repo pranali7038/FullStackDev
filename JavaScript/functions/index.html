@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in Js</title>
+</head>
+<body>
+    <h2>functions in Javascript</h2>
+    
+    <script>
+        
+        //function declaration
+        function demo(){
+            console.log("This is basic testing function");
+        }
+        //function calling
+        demo();
+
+        function counting(){
+            for(let i=0;i<=50;i++){
+                console.log(i);  
+            }
+        }
+        //counting();
+
+        function add(a,b){
+            console.log(a+b);
+            
+        }
+        add(2,3);
+
+
+        //returning from function
+        function getAvg(a,b,c){
+            return (a+b+c)/3;
+        }
+        console.log(getAvg(3,3,4));
+        
+
+        function getName(fname,lname){
+            return fname+lname;
+        }
+        console.log("pranali","Jahagirdar");
+        
+
+        //function expression
+        const solve = function(a,b){
+            return a*b;
+        }
+        console.log(solve(2,5));
+        
+
+        //arrow function
+        const res = (a,b)=>{
+            return a+b;
+        }
+        console.log(res(10,10));
+        
+
+    </script>
+</body>
+</html>

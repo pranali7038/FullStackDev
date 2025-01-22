@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call stack an hoisting</title>
+</head>
+<body>
+    <h2>Call Stack and hoisting</h2>
+
+    <script>
+
+        //function Hoisting
+        sayName("Pranali");
+        function sayName(name){
+            console.log(name);
+             
+        }
+
+        //variable hoisting
+        
+        console.log(age);
+        var age=25; //undefined
+
+        //hoisting using let and const (both will generate error)
+        // console.log(val);
+        
+        // let val=10;
+
+        // console.log(sol);
+        // const sol=90;
+
+        //this is also generate error
+        // console.log(name("pranali"));
+        // var name = (name)=>{
+        //     return name;
+        // }
+        
+        class Human{
+
+        }
+        const obj1 = new Human();
+
+
+        //function call stack
+        function A(){
+            B();
+            console.log("Function A is called");
+            
+        }
+        function B(){
+            C();
+            console.log("Function B is called");
+            
+        }
+        function C(){
+            D();
+            console.log("Function C is called");
+            
+        }
+        function D(){
+            console.log("Function D is called");
+            
+        }
+        A();
+
+    </script>
+</body>
+</html>
