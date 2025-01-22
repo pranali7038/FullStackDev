@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporal dead zone and variable scoping</title>
+</head>
+<body>
+    <h2>Temporal dead zone and variable scoping</h2>
+
+    <script>
+        //variable scope
+
+        //global scope(accessible every where)
+        // const age =18;
+        // console.log(age);
+        // {
+        //     console.log(age);
+            
+        // }
+
+        // //function scope(accessed in function only)
+        // function name(){
+        //     var val="pranali jahagirdar";
+        //     console.log(val);
+        // }
+        // name();
+        // //console.log(val); //error
+        
+        // //block scoping
+        // {
+        //     var ans ="hello";
+        //     console.log(ans);
+            
+        // }
+        // console.log(ans);
+        
+        // //temporal dead zone
+
+        console.log(res); //error
+        console.log(ans);//error
+        
+        console.log(marks);
+        var marks =90;
+        let res=87;
+        const ans=876;
+
+
+    </script>
+</body>
+</html>

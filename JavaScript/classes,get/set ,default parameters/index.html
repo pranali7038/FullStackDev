@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes get/set ,default parameters in function</title>
+</head>
+<body>
+    <h2>Classes get/set ,default parameters in function</h2>
+
+    <script>
+
+    //1)class
+    class demo{
+        age=13;
+        #wt=87;  //private
+        ht=65;
+
+        show(){
+            console.log(this.age);
+            
+        }
+    }
+    let d = new demo();
+    console.log(d.ht);
+    d.show();
+    
+
+
+
+    //get and set method
+    class student{
+        #name;
+       
+
+        get val(){
+            return this.#name;
+        }
+        set show(name){
+            this.#name = name;
+        }
+    }
+    let ob = new student();
+    // console.log(ob.#name);
+   
+    //constructor
+
+    class stud {
+    // properties
+    age;
+    #wt; // private field
+    name;
+
+    constructor(age, name) {
+        this.age = age;
+        this.name = name;
+    }
+
+    // Method to set #wt
+    setWeight(weight) {
+        this.#wt = weight;
+    }
+
+    // Method to get #wt
+    getWeight() {
+        return this.#wt;
+    }
+}
+
+let s = new stud(10, "pranali");
+s.setWeight(50);
+console.log(s.age);       // Output: 10
+console.log(s.getWeight()); // Output: 50
+
+
+//default parametr
+function say(myName,age=89){
+    console.log(myName);
+    console.log(age);
+    
+}
+say("pranali");
+    
+    
+    </script>
+</body>
+</html>
