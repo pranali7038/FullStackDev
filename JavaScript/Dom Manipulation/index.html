@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM MAnipulation</title>
+</head>
+<body>
+    <p id="fpara">DOM Manipulation</p>
+    <h1 class="fheading">First Heading</h1>
+    <h2>second largest heading</h2>
+
+    <div id="fdiv">
+        <p>
+            this is my first
+            <span>text</span>
+        </p>
+        <p>this is my second para</p>
+    </div>
+    
+    <script>
+       
+        //fetching using id
+        let para =document.getElementById("fpara");
+        console.log(para);
+
+        //fetching using class
+        let temp = document.getElementsByClassName("fheading");
+        console.log(temp);
+
+        //fetching using tag name
+        let res = document.getElementsByTagName("h2");
+        console.log(res);
+
+        //using queryselector
+
+        let q = document.querySelector("#fpara");
+        console.log(q);
+
+        let c = document.querySelector(".fheading");
+        console.log(c);
+        
+        
+
+        //updating html element
+        
+        let ele = document.querySelector('#fdiv');
+        console.log(ele);
+
+        console.log(ele.textContent);
+
+        let newHeading = document.createElement('h1');
+        newHeading.textContent="My name is pranali";
+        console.log(newHeading);
+
+        let bodyTag = document.querySelector('body');
+        bodyTag.appendChild(newHeading)
+
+        
+        
+        
+        
+
+
+        
+        
+
+    </script>
+</body>
+</html>

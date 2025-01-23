@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object cloning</title>
+</head>
+<body>
+    <h2>Object Cloning</h2>
+    <script>
+
+        let obj ={
+            age:19,
+            wt:68,
+            ht:19
+        };
+        console.log(obj);
+
+        //dynamically changing value 
+        obj.col="red";
+        console.log(obj);
+        
+        //cloning using spread operator
+        // let src ={age:13};
+        
+        // let dest ={...src};
+        // src.age =90;
+        // console.log(src);
+        // console.log(dest);
+
+        //cloning with assign method
+
+        // let src= {age:67};
+        // let dest = Object.assign({},src);
+        // console.log(src);
+        // src.age=90;
+        // console.log(src);
+        
+        // console.log(dest);
+
+        let src ={
+            age:30,
+            name:"Pranali"
+        }
+
+        let dest={};
+        for(let key in src){
+            let newKey = key;
+            let val = src[key];
+
+            dest[newKey]=val;
+        }
+        console.log(src);
+        src.name="Sakshi"
+        console.log(src);
+        console.log(dest);
+  
+    
+
+
+    </script>
+</body>
+</html>
