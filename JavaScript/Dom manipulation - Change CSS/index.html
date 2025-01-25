@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM MAnipulation - Change CSS</title>
+</head>
+<body>
+    
+    <div id="fdiv" style="background-color: aqua;
+    padding: 2rem;">
+
+        first div
+        <p id="fpara" style="background-color: green; padding: 1rem;" class="dummy">first para</p>
+
+
+    
+    <div id="sdiv" style="background-color: yellow; padding: 1.2rem;">
+        second div
+        <p id="spara" style="background-color: orange; padding: 1.8rem;">second para</p>
+    </div>
+</div>
+    <script>
+
+        //1).style property
+        // let para2 = document.getElementById('spara');
+        // console.log(para2.style);  //geting style
+
+        // para2.style.backgroundColor='red';  //setting style
+
+        //2).cssText
+        // let sdiv = document.getElementById('sdiv');
+        // console.log(sdiv.style.cssText);  //getting styke
+
+        // sdiv.style.cssText = "background-color:black;color:white;padding:0.5rem" //setting style
+        
+        //3)setAttribute
+        // let fdiv = document.getElementById('fdiv');
+
+        // //setting attribute
+        // fdiv.setAttribute('class','divClass');
+        // console.log(fdiv);
+
+        // //setting style
+        // fdiv.setAttribute('style','color:pink');
+
+        //4).className
+        // let fpara = document.getElementById('fpara');
+        // let Cname = fpara.className;
+        // console.log(Cname);
+
+        // fpara.className="paranali jahagirdar";
+        // console.log(fpara.className);
+        
+
+        //5).classList
+
+        let fpara = document.getElementById('fpara');
+        console.log(fpara);
+
+        //fetch class
+        console.log(fpara.classList);
+        
+        //functions
+        //1.add
+        fpara.classList.add('thirdclass');
+
+        //2.remove
+        fpara.classList.remove('thirdclass');
+
+        //3.toggle
+        fpara.classList.toggle('thirdclass');
+        console.log(fpara.classList);
+        fpara.classList.toggle('thirdclass');
+        console.log(fpara.classList);
+
+        //4.contains
+        console.log(fpara.classList.contains('thirdclass'));
+        console.log(fpara.classList.contains('dummy'));
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

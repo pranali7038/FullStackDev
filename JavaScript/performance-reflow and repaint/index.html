@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance</title>
+</head>
+<body>
+    
+    <script>
+
+        //code 1
+        const t1 = performance.now();
+        for(let i=1;i<=100;i++){
+            let para = document.createElement('p');
+            para.textContent ="This is para "+i;
+            document.body.appendChild(para);
+        }
+        const t2 = performance.now();
+        console.log("total time taken is "+(t2-t1));  //total time taken is 1.2999999821186066
+
+        //code 2
+        const t3 = performance.now();
+        let mydiv = document.createElement('div');
+        for(let i=1;i<=100;i++){
+            let para = document.createElement('p');
+            para.textContent ="This is para "+i;
+            mydiv.appendChild(para);
+        }
+        document.body.appendChild(mydiv);
+        const t4 = performance.now();
+        
+        console.log("total time taken is "+(t4-t3)); //total time taken is 1.0999999940395355
+
+
+        //code3 with document fragmnet
+        const t5 = performance.now();
+        let fragmnet = document.createDocumentFragment();
+        for(let i=1;i<=100;i++){
+            let para = document.createElement('p');
+            para.textContent ="This is para "+ i;
+            fragmnet.appendChild(para);
+        }
+        document.body.appendChild(fragmnet);
+        const t6 = performance.now();
+
+        console.log("total time taken is "+(t6-t5)); //total time taken is 0.30000001192092896
+        
+        
+    </script>
+</body>
+</html>
