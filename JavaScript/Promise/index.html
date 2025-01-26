@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises in JS</title>
+</head>
+
+<body>
+    <h2>Promises in JS</h2>
+
+    <script>
+
+        // let fPromise = new Promise((resolve, reject) => {
+        //     // console.log("Pranali");
+        //     //reject(new Error("Internal server error"));
+
+        //     setTimeout(function sayName() {
+        //         console.log("my name is pranali jahagirdar");
+        //     }, 15000);
+
+        //     resolve(1);
+        // });
+        // console.log(fPromise);
+
+
+        let promise1 = new Promise((resolve,reject)=>{
+            let ans = true;
+            if(ans){
+                resolve("promise fullfilled");
+            }else{
+                reject("Promise rejected");
+            }
+        });
+
+        promise1.then((message)=>{
+            console.log("then ka msg "+message);
+            
+        }).catch((error)=>{
+            console.log("Error: "+error);
+        })
+        
+
+        //promise.all
+
+        let p1 = new Promise((resolve,reject)=>{
+            setTimeout(resolve,1000,"first");
+        })
+
+        let p2 = new Promise((resolve,reject)=>{
+            setTimeout(resolve,1000,"second");
+        })
+
+        let p3 = new Promise((resolve,reject)=>{
+            setTimeout(resolve,1000,"third");
+        })
+
+        Promise.all([p1,p2,p3])
+        .then((val)=>{
+            console.log(val);
+            
+        }).catch((err)=>{
+            console.log(err);    
+        })
+
+    </script>
+</body>
+
+</html>
